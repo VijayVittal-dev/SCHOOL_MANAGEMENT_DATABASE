@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="performance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Performance Analytics Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stdb.html">Database</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="maintenance.html">Maintenance</a></li>
+                <li><a href="#">Analytics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chart-section">
+            <h2>Student Performance</h2>
+            <canvas id="studentPerformanceChart"></canvas>
+        </section>
+
+        <section class="chart-section">
+            <h2>Teacher Effectiveness</h2>
+            <canvas id="teacherEffectivenessChart"></canvas>
+        </section>
+
+        <section class="chart-section">
+            <h2>Overall Attendance</h2>
+            <canvas id="attendanceChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartGov School Management System</p>
+    </footer>
+
+    <script src="performance.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget & Resource Allocation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .summary-section {
+    margin: 20px auto;
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.summary-section p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.summary-section span {
+    color: #005792;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Budget & Resource Allocation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stdb.html">Database</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="#">Budget</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Add Expense/Income</h2>
+            <form id="budgetForm">
+                <label for="category">Category:</label>
+                <input type="text" id="category" required>
+
+                <label for="amount">Amount (₹):</label>
+                <input type="number" id="amount" required>
+
+                <label for="type">Type:</label>
+                <select id="type">
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
+                </select>
+
+                <button type="submit">Add Entry</button>
+            </form>
+        </section>
+
+        <section class="records-section">
+            <h2>Budget Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount (₹)</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="budgetTable">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section class="summary-section">
+            <h2>Summary</h2>
+            <p><strong>Total Income: </strong> ₹<span id="totalIncome">0</span></p>
+            <p><strong>Total Expenses: </strong> ₹<span id="totalExpenses">0</span></p>
+            <p><strong>Balance: </strong> ₹<span id="balance">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartGov School Management System</p>
+    </footer>
+
+    <script src="budget.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student & Teacher Database</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .database-section {
+    margin: 20px auto;
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background: #005792;
+    color: white;
+}
+
+button {
+    padding: 5px;
+    margin: 3px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Student & Teacher Database</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Database</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="maintenance.html">Maintenance</a></li>
+                <li><a href="performance.html">Analytics</a></li>
+                <li><a href="pt.html">Communication</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="database-section">
+            <h2>Students</h2>
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Grade</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data will be loaded here -->
+                </tbody>
+            </table>
+            <button onclick="addStudent()">Add Student</button>
+        </section>
+
+        <section class="database-section">
+            <h2>Teachers</h2>
+            <table id="teacherTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Teacher data will be loaded here -->
+                </tbody>
+            </table>
+            <button onclick="addTeacher()">Add Teacher</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartGov School Management System</p>
+    </footer>
+
+    <script src="stdb.js"></script>
+</body>
+
+</html>

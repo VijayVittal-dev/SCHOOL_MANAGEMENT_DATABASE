@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Maintenance Requests</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="infra.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Infrastructure Maintenance Requests</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stdb.html">Database</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="#">Maintenance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Report a Maintenance Issue</h2>
+            <form id="maintenanceForm">
+                <label for="issueType">Issue Type:</label>
+                <select id="issueType" required>
+                    <option value="Classroom Repair">Classroom Repair</option>
+                    <option value="Electrical Problem">Electrical Problem</option>
+                    <option value="Plumbing Issue">Plumbing Issue</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" rows="3" required></textarea>
+
+                <label for="reporterName">Reported By:</label>
+                <input type="text" id="reporterName" required>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+
+        <section class="records-section">
+            <h2>Maintenance Requests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Issue Type</th>
+                        <th>Description</th>
+                        <th>Reported By</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="maintenanceTable">
+                    <!-- Maintenance requests will be added here dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartGov School Management System</p>
+    </footer>
+
+    <script src="infra.js"></script>
+</body>
+
+</html>
